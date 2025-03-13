@@ -18,8 +18,8 @@ const ClinicLeft = () => {
         experience. Personalized patient care is what sets Medicus Medical
         Center apart.
       </p>
-      <div className="flex flex-col xl:flex-row items-center gap-4  mt-8">
-        <h4 className="text-gray-800 text-2xl font-semibold w-[500px] xl:w-[600px]">
+      <div className="flex flex-col xl:flex-row items-start md:items-center gap-4  mt-8">
+        <h4 className="text-gray-800 text-xl sm:text-2xl font-semibold w-[500px] xl:w-[600px] ">
           MODERN MEDICAL FACILITIES
         </h4>
         <div className="w-full">
