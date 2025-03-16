@@ -1,3 +1,4 @@
+import Advantage from "@/components/ui/advantage/Advantage";
 import Appointment from "@/components/ui/appointment/Appointment";
 import Discount from "@/components/ui/discount/Discount";
 import Services from "@/components/ui/services/Services";
@@ -8,6 +9,7 @@ const page = () => {
     <div>
       <Services />
       <Appointment />
+      <Advantage />
       <Discount />
     </div>
   );
