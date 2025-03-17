@@ -20,7 +20,7 @@ const Services = () => {
               Our Services
             </h2>
             <p className="bg-[#55C9C9] w-[45%] h-[1px] mt-2 flex mx-auto"></p>
-            <p className="text-base font-normal text-gray-500 mt-5 max-w-[500px]  flex mx-auto">
+            <p className="text-base font-normal text-gray-500 mt-5 max-w-[600px]  flex mx-auto">
               World-class rehabilitation solutions and individualized recovery
               plans, from acute care to ongoing outpatient treatment and beyond.
               World-class rehabilitation solutions and individualized recovery
@@ -29,7 +29,7 @@ const Services = () => {
               recovery plans, from acute care to ongoing outpatient treatment
             </p>
 
-            <p className="text-base font-normal text-gray-500 mt-5 max-w-[500px]  flex mx-auto">
+            <p className="text-base font-normal text-gray-500 mt-5 max-w-[600px]  flex mx-auto">
               World-class rehabilitation solutions and individualized recovery
               plans, from acute care to ongoing outpatient treatment and beyond.
               World-class rehabilitation solutions and individualized recovery

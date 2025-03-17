@@ -7,7 +7,7 @@ const ComittedRight = () => {
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#002345] max-w-[500px]">
         Committed To Dental Excellence
       </h1>
-      <p className="h-[1px] w-[150px] bg-gray-300 my-8"></p>
+      <p className="h-[1px] w-[150px] bg-[#52CBCB] my-8"></p>
 
       <p className="text-gray-500 text-base font-normal max-w-[500px]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,

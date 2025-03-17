@@ -72,7 +72,7 @@ const News = () => {
                 className="basis-full sm:basis-1/2 lg:basis-1/3 flex flex-start bg-white"
                 key={slide.id}
               >
-                <div className="rounded-md  border border-gray-200 group shadow-md">
+                <div className="rounded-md  border border-gray-200 group shadow-md overflow-hidden">
                   <div className="relative">
                     <Image
                       src={slide.imageUrl}
