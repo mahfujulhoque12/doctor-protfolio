@@ -35,7 +35,7 @@ const TeamMembers = () => {
               className="w-full h-[300px] rounded-t-lg object-cover transition-opacity duration-300 group-hover:opacity-30"
             />
             {/* Black background overlay for the image only */}
-            <div className="absolute inset-x-0 top-0 h-[300px] bg-[#4DCEC6] opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-t-lg"></div>
+            <div className="absolute inset-x-0 top-0 h-[300px] bg-[#4DCEC6] opacity-0 group-hover:opacity-40 transition-opacity duration-300 rounded-t-lg"></div>
             {/* Text that appears on hover */}
             <div className="absolute inset-x-0 top-0 h-[300px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="flex items-center gap-4">

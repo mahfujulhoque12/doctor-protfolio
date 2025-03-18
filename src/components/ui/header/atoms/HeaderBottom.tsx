@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -14,11 +14,13 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const HeaderBottom = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openSubMenus, setOpenSubMenus] = useState<Record<string, boolean>>({});
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   const displayNames: Record<string, string> = {
     Home: "Home",
-    AboutUs: "About Us",
+    AboutUs: "About Me",
     Services: "Services",
     Blogs: "Blogs",
     Contact: "Contact",
@@ -30,7 +32,7 @@ const HeaderBottom = () => {
       subItems: ["Landing Page", "About Us", "Features"],
     },
     AboutUs: {
-      path: "/about-us",
+      path: "/about-me",
       subItems: ["Team", "Pricing", "FAQ", "404 Page"],
     },
     Services: {
@@ -54,6 +56,26 @@ const HeaderBottom = () => {
       [mainItem]: !prev[mainItem], // Toggle only the clicked menu item
     }));
   };
+
+  // Handle clicks outside the search area
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
+        setIsSearchOpen(false);
+      }
+    };
+    if (isSearchOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isSearchOpen]);
+  
+
   return (
     <div className="bg-white">
       <MaxWidthWrapper>
@@ -113,7 +135,7 @@ const HeaderBottom = () => {
                           </Link>
                         ))}
                       </div>
-                    </li>                 
+                    </li>
                   );
                 }
               )}
@@ -185,9 +207,23 @@ const HeaderBottom = () => {
 
           {/* Right Side Icons - Desktop */}
           <div className="hidden md:flex items-center gap-7">
-            <button className="cursor-pointer">
-              <FaSearchPlus className="text-[#002345]" size={25} />
-            </button>
+            <div className="relative" ref={searchRef}>
+              <button
+                className="cursor-pointer"
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+              >
+                <FaSearchPlus className="text-[#002345]" size={25} />
+              </button>
+              {isSearchOpen && (
+                <div className="absolute top-full -left-44 mt-2">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="bg-white w-48 px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#52CBCB]"
+                  />
+                </div>
+              )}
+            </div>
             <button className="relative cursor-pointer">
               <FaCartShopping className="text-[#002345]" size={25} />
               <span className="absolute -top-2 -right-2 bg-[#52CBCB] text-white w-4 h-4 text-[10px] rounded-full flex items-center justify-center">

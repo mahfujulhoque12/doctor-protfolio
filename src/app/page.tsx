@@ -1,6 +1,7 @@
 import CallToAction from "@/components/ui/call-to-action/CallToAction";
 import Comitted from "@/components/ui/comitted/Comitted";
 import Consultation from "@/components/ui/consultation/Consultation";
+import Counter from "@/components/ui/counter/Counter";
 
 import Hero from "@/components/ui/hero/Hero";
 import News from "@/components/ui/news/News";
@@ -19,6 +20,7 @@ export default function Home() {
       <Video />
       <Review />
       <News />
+      <Counter />
       <Consultation />
     </div>
   );
