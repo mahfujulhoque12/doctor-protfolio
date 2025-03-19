@@ -9,7 +9,7 @@ const WhoIAm = () => {
   return (
     <MaxWidthWrapper className="my-16">
       <div className="bg-white p-6 rounded-md shadow-md  ">
-        <div className="flex flex-col md:flex-row gap-8  w-[80%] mx-auto ">
+        <div className="flex flex-col md:flex-row gap-8 w-full md:w-[80%] mx-auto ">
           <div className="basis-full md:basis-[30%]">
             <Image
               src={who}
